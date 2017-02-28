@@ -48,11 +48,13 @@ Page({
       //获取手指触摸的是哪一项
       var index = e.target.dataset.index;
       var list = this.data.list;
-      list[index].txtStyle = txtStyle; 
-      //更新列表的状态
-      this.setData({
-        list:list
-      });
+      if(index){
+        list[index].txtStyle = txtStyle; 
+        //更新列表的状态
+        this.setData({
+          list:list
+        });
+      }
     }
   },
 
@@ -68,11 +70,14 @@ Page({
       //获取手指触摸的是哪一项
       var index = e.target.dataset.index;
       var list = this.data.list;
-      list[index].txtStyle = txtStyle;
-      //更新列表的状态
-      this.setData({
-        list:list
-      });
+      console.log(e);
+      if(index){
+        list[index].txtStyle = txtStyle;
+        //更新列表的状态
+        this.setData({
+          list:list
+        });
+      }
     }
   },
   //获取元素自适应后的实际宽度
