@@ -48,7 +48,7 @@ Page({
       //获取手指触摸的是哪一项
       var index = e.target.dataset.index;
       var list = this.data.list;
-      if(index){
+      if(index >= 0){
         list[index].txtStyle = txtStyle; 
         //更新列表的状态
         this.setData({
@@ -71,7 +71,7 @@ Page({
       var index = e.target.dataset.index;
       var list = this.data.list;
       console.log(e);
-      if(index){
+      if(index >= 0){
         list[index].txtStyle = txtStyle;
         //更新列表的状态
         this.setData({
